@@ -1,5 +1,7 @@
-package com.study.lecture.presentation;
+package com.study.lecture.presentation.controller;
 
+import com.study.lecture.presentation.dto.request.LectureRequestDTO;
+import com.study.lecture.presentation.dto.response.LectureResponseDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -10,8 +12,8 @@ public class LectureController {
      * 특강 신청 API
      */
     @PostMapping("apply")
-    public LectureDTO apply(@RequestBody LectureDTO dto) {
-        return new LectureDTO();
+    public LectureResponseDTO apply(@RequestBody LectureRequestDTO dto) {
+        return new LectureResponseDTO();
     }
 
     /**
