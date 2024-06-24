@@ -10,12 +10,12 @@ public class LectureHistoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(nullable = false)
-    private Long userId;
+    private long userId;
 
     @Column(nullable = false)
-    private Long lectureId;
+    private long lectureId;
 
 }
