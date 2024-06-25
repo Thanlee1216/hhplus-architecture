@@ -1,4 +1,4 @@
-package com.study.lecture.data_access.entity;
+package com.study.lecture.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
