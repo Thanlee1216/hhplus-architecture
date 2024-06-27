@@ -4,7 +4,6 @@ public record LectureResponseDTO(
         long userId,
         String userName,
         long lectureId,
-        String lectureName,
-        boolean isApply
+        String lectureName
 ) {
 }

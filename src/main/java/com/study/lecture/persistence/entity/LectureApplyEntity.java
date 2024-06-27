@@ -16,5 +16,8 @@ public class LectureApplyEntity {
     private long userId;
 
     @Column(nullable = false)
+    private String userName;
+
+    @Column(nullable = false)
     private long lectureId;
 }
