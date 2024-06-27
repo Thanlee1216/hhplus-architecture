@@ -18,4 +18,7 @@ public class LectureHistoryEntity {
     @Column(nullable = false)
     private long lectureId;
 
+    @Column(nullable = false)
+    private boolean isApply;
+
 }

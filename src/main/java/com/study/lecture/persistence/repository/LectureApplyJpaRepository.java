@@ -1,0 +1,7 @@
+package com.study.lecture.persistence.repository;
+
+import com.study.lecture.persistence.entity.LectureApplyEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LectureApplyJpaRepository extends JpaRepository<LectureApplyEntity, Long> {
+}

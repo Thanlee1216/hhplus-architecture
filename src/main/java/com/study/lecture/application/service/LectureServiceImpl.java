@@ -1,4 +1,4 @@
-package com.study.lecture.application;
+package com.study.lecture.application.service;
 
 import org.springframework.stereotype.Service;
 
