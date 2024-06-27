@@ -1,5 +1,9 @@
 package com.study.lecture.persistence.entity;
 
+import com.study.lecture.application.domain.LectureApplyDomain;
+import com.study.lecture.application.domain.LectureDomain;
+import com.study.lecture.application.domain.LectureHistoryDomain;
+import com.study.lecture.application.domain.UserDomain;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,5 +24,16 @@ public class LectureHistoryEntity {
 
     @Column(nullable = false)
     private boolean isApply;
+    
+    public LectureHistoryEntity() {
+    }
+    
+    public LectureHistoryEntity(UserDomain user, LectureDomain lecture) {
+        this.userId = user.userId();
+        this.lectureId = lecture.lectureId();
+    }
 
+    public LectureHistoryDomain convertToLectureHistoryDomain() {
+        return new LectureHistoryDomain(userId, lectureId);
+    }
 }
