@@ -95,8 +95,8 @@ class LectureControllerTest {
     void getLectureListSuccess() throws Exception {
         //given
         List<LectureDomain> lectureList = List.of(
-                new LectureDomain(1L, "TDD 정말 어렵지만 할 수 있다!", "20240723"),
-                new LectureDomain(2L, "TDD 정말 어렵지만 할 수 있다!!!", "20240724")
+                new LectureDomain(1L, "TDD 정말 어렵지만 할 수 있다!", "20240723", 0),
+                new LectureDomain(2L, "TDD 정말 어렵지만 할 수 있다!!!", "20240724", 0)
         );
         when(lectureService.getLectureList()).thenReturn(lectureList);
 
@@ -116,8 +116,8 @@ class LectureControllerTest {
         //given
         long userId = 1L;
         List<LectureDomain> lectureList = List.of(
-                new LectureDomain(1L, "TDD 정말 어렵지만 할 수 있다!", "20240723"),
-                new LectureDomain(2L, "TDD 정말 어렵지만 할 수 있다!!!", "20240724")
+                new LectureDomain(1L, "TDD 정말 어렵지만 할 수 있다!", "20240723", 0),
+                new LectureDomain(2L, "TDD 정말 어렵지만 할 수 있다!!!", "20240724", 0)
         );
         when(lectureService.getLectureApply(new UserDomain(userId, null))).thenReturn(lectureList);
 
