@@ -15,6 +15,6 @@ public class LectureEntity {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private long applicantCount;
+    @Column(nullable = false, length = 8)
+    private String date;
 }
