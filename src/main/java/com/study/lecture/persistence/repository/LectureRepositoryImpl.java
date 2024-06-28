@@ -33,7 +33,6 @@ public class LectureRepositoryImpl implements LectureRepository {
         return LectureEntity.convertToLectureDomain(lectureEntityList);
     }
 
-
     @Override
     public LectureDomain save(LectureDomain lecture) {
         LectureEntity entity = lectureJpaRepository.save(new LectureEntity(lecture));
