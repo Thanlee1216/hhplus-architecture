@@ -21,8 +21,21 @@ public class LectureRepositoryImpl implements LectureRepository {
     }
 
     @Override
+    public LectureDomain update(LectureDomain lecture) {
+        LectureEntity entity = lectureJpaRepository.findById(lecture.lectureId()).get();
+        entity.setApplicantCount(lecture.applicantCount());
+        return entity.convertToLectureDomain();
+    }
+
+    @Override
     public List<LectureDomain> findAll() {
         List<LectureEntity> lectureEntityList = lectureJpaRepository.findAll();
         return LectureEntity.convertToLectureDomain(lectureEntityList);
+    }
+
+    @Override
+    public LectureDomain save(LectureDomain lecture) {
+        LectureEntity entity = lectureJpaRepository.save(new LectureEntity(lecture));
+        return entity.convertToLectureDomain();
     }
 }

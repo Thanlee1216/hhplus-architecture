@@ -6,6 +6,9 @@ import java.util.List;
 
 public interface LectureRepository {
     LectureDomain findById(LectureDomain lecture);
+    LectureDomain update(LectureDomain lecture);
 
     List<LectureDomain> findAll();
+
+    LectureDomain save(LectureDomain lecture);
 }

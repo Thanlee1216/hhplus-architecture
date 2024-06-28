@@ -34,6 +34,7 @@ public class LectureServiceImpl implements LectureService {
     public LectureApplyDomain lectureApply(UserDomain user, LectureDomain lecture) {
         LectureDomain lectureDomain = lectureRepository.findById(lecture);
         lectureDomain.vaildateApplicantConutOverflow();
+        lectureRepository.update(lectureDomain.countUpdate());
         LectureApplyDomain lectureApplyDomain = lectureApplyRepository.insert(user, lecture);
         lectureHistoryRepository.insert(user, lecture);
         return lectureApplyDomain;
