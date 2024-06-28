@@ -14,6 +14,6 @@ public record LectureRequestDTO(
     }
 
     public LectureDomain convertToLectureDomain() {
-        return new LectureDomain(this.lectureId, this.lectureName);
+        return new LectureDomain(this.lectureId, this.lectureName, null, 0);
     }
 }
