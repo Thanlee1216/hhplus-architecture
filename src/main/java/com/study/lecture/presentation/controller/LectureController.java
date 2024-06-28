@@ -40,7 +40,7 @@ public class LectureController {
      * 특강 신청 여부 조회 API
      */
     @GetMapping("application/{userId}")
-    public List<LectureResponseDTO> getLectureApply(@PathVariable long userId) {
+    public List<LectureResponseDTO> getLectureApply(@PathVariable(value = "userId") long userId) {
         List<LectureDomain> lectureList = service.getLectureApply(new UserDomain(userId, null));
         return LectureResponseDTO.converteFromLectureDomainToDtoList(lectureList);
     }
