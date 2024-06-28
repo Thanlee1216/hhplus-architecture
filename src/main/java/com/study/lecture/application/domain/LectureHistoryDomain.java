@@ -1,4 +1,7 @@
 package com.study.lecture.application.domain;
 
-public record LectureHistoryDomain() {
+public record LectureHistoryDomain(
+        long userId,
+        long lectureId
+) {
 }
