@@ -14,4 +14,8 @@ public record LectureDomain(
         }
         return this;
     }
+
+    public LectureDomain countUpdate() {
+        return new LectureDomain(lectureId, lectureName, date, applicantCount + 1L);
+    }
 }

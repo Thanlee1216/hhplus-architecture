@@ -24,6 +24,12 @@ public class LectureEntity {
     @Column(nullable = false)
     private long applicantCount;
 
+    public LectureEntity(LectureDomain lecture) {
+        this.name = lecture.lectureName();
+        this.date = lecture.date();
+        this.applicantCount = lecture.applicantCount();
+    }
+
     public LectureDomain convertToLectureDomain() {
         return new LectureDomain(id, name, date, applicantCount);
     }
