@@ -8,4 +8,6 @@ public interface LectureRepository {
     LectureDomain findById(LectureDomain lecture);
 
     List<LectureDomain> findAll();
+
+    LectureDomain save(LectureDomain lecture);
 }

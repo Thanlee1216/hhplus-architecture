@@ -25,4 +25,10 @@ public class LectureRepositoryImpl implements LectureRepository {
         List<LectureEntity> lectureEntityList = lectureJpaRepository.findAll();
         return LectureEntity.convertToLectureDomain(lectureEntityList);
     }
+
+    @Override
+    public LectureDomain save(LectureDomain lecture) {
+        LectureEntity entity = lectureJpaRepository.save(new LectureEntity(lecture));
+        return entity.convertToLectureDomain();
+    }
 }
